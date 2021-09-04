@@ -1,2 +1,2 @@
 ## Subjects-Finder
-#This is a subjects finder for enrollment
+This is a subjects finder for enrollment
