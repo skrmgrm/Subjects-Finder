@@ -15,7 +15,7 @@ const Navbar = () => {
             />
 
             <button className="btn btn-outline-primary" type="submit">
-              <i className="bi bi-search"></i> Search
+              <i className="bi bi-search"></i>
             </button>
           </form>
         </div>

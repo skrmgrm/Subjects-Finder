@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "../Item";
 import Navbar from "../UI/Navbar";
-
+import Footer from "../UI/Footer";
 const Main = () => {
   return (
     <div className="showcase">
@@ -17,6 +17,7 @@ const Main = () => {
         <Item />
         {/* DUMMY DATA */}
       </div>
+      <Footer />
     </div>
   );
 };

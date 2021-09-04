@@ -2,6 +2,7 @@ import React from "react";
 import Item from "../Item";
 import Navbar from "../UI/Navbar";
 import Button from "../UI/Button";
+import Footer from "../UI/Footer";
 
 const Admin = () => {
   return (

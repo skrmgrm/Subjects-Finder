@@ -1,11 +1,11 @@
 import "./App.css";
 import Admin from "./components/pages/Admin";
-import Main from "./components/pages/Main";
 import Footer from "./components/UI/Footer";
+import Main from "./components/pages/Main";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app bg-light">
       {/* <Main /> */}
 
       <Admin />
