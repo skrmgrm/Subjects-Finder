@@ -3,10 +3,3 @@
   display: block;
   height: 200px;
 }
-
-.modal-dialog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
