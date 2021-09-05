@@ -20,7 +20,9 @@ const Item = (props) => {
           <div className="col-md-2">
             <a
               href={props.link}
+              target="_blank"
               className="btn btn-primary w-100 my-3 my-md-5 "
+              rel="noreferrer"
             >
               Join
             </a>

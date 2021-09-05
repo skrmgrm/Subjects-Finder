@@ -44,7 +44,7 @@ const Main = () => {
         subject.code.includes(value) || subject.description.includes(value)
       );
     });
-    console.log(value);
+
     setFilteredSubjects(filteredSubjects);
   };
 
@@ -54,7 +54,7 @@ const Main = () => {
       <div className="container pt-4">
         {subjects.length === 0 && (
           <div className="container text-center mt-5">
-            <p className="lead">Loading ...</p>
+            <p className="h5 text-secondary">No subjects found...</p>
           </div>
         )}
         {onSearch &&

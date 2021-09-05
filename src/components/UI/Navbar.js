@@ -16,7 +16,7 @@ const Navbar = (props) => {
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div className="container-fluid d-flex justify-content-center align-center">
+        <div className="container-fluid d-flex flex-column justify-content-center align-center">
           <input
             className="form-control me-2
               "
@@ -25,14 +25,11 @@ const Navbar = (props) => {
             value={search}
             onChange={onSearchChange}
           />
-          <button className="btn btn-outline-primary">
-            <i className="bi bi-search"></i>
-          </button>
+          <div className="container-fluid text-start mt-2">
+            <p className="lead text-primary">&copy; BARLOLONG, JOSHUA (2021)</p>
+          </div>
         </div>
       </nav>
-      <div className="container d-flex justify-content-center align-center">
-        <p className="lead text-primary">&copy; 2021 skrmgrm</p>
-      </div>
     </div>
   );
 };
