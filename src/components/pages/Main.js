@@ -41,7 +41,12 @@ const Main = () => {
   const onSearchHandler = (value) => {
     const filteredSubjects = subjects.filter((subject) => {
       return (
-        subject.code.includes(value) || subject.description.includes(value)
+        subject.code.toUpperCase().includes(value) ||
+        subject.description.toUpperCase().includes(value) ||
+        subject.code.includes(value) ||
+        subject.description.includes(value) ||
+        subject.code.toLowerCase().includes(value) ||
+        subject.description.toLowerCase().includes(value)
       );
     });
 
@@ -52,11 +57,12 @@ const Main = () => {
     <div className="showcase">
       <Navbar onSearch={onSearchHandler} searchState={setOnSearch} />
       <div className="container pt-4">
-        {subjects.length === 0 && (
-          <div className="container text-center mt-5">
-            <p className="h5 text-secondary">No subjects found...</p>
-          </div>
-        )}
+        {subjects.length === 0 ||
+          (filteredSubjects.length === 0 && (
+            <div className="container text-center mt-5">
+              <p className="h5 text-secondary">No subjects found...</p>
+            </div>
+          ))}
         {onSearch &&
           filteredSubjects.map((subject) => {
             return (
