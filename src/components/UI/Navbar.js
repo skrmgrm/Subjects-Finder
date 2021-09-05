@@ -26,7 +26,9 @@ const Navbar = (props) => {
             onChange={onSearchChange}
           />
           <div className="container-fluid text-start mt-2">
-            <p className="lead text-primary">&copy; BARLOLONG, JOSHUA (2021)</p>
+            <p className="lead-text text-primary">
+              &copy; BARLOLONG, JOSHUA (2021)
+            </p>
           </div>
         </div>
       </nav>

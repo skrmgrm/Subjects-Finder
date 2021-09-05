@@ -55,7 +55,6 @@ const Admin = () => {
         "https://subjects-finder-default-rtdb.asia-southeast1.firebasedatabase.app/subjects.json",
         {
           code,
-          subjects,
           description,
           schedule,
           link,
@@ -160,7 +159,7 @@ const Admin = () => {
         })}
 
       {/* MODAL*/}
-      <div className="modal fade" id="exampleModal" tabIndex="-1">
+      <div className="modal fade show" id="exampleModal" tabIndex="-1">
         <div className="modal-dialog">
           <div className="modal-content ">
             <div className="modal-header">
