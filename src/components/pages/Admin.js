@@ -126,7 +126,7 @@ const Admin = () => {
         </button>
       </div>
 
-      {subjects.length === 0 || (
+      {subjects.length === 0 && (
         <div className="container text-center mt-5">
           <p className="h5 text-secondary">No subjects found...</p>
         </div>
