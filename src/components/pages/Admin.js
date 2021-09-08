@@ -51,17 +51,21 @@ const Admin = () => {
     e.preventDefault();
 
     try {
-      await axios.post(
-        "https://subjects-finder-default-rtdb.asia-southeast1.firebasedatabase.app/subjects.json",
+      const response = await axios.post(
+        "https://subjects-finder-backend.herokuapp.com/subjects",
         {
           code,
           description,
-          schedule,
-          link,
           section,
+          schedule,
+          groupLink: link,
         }
       );
+      
+      console.log(response, 'post response')
+
     } catch (error) {
+      console.log('triggered')
       console.log(error);
     }
 
@@ -181,7 +185,7 @@ const Admin = () => {
 
             {/* Modal */}
             <div className="modal-body ">
-              <form onSubmit={onSubmitHandler}>
+              <form>
                 <div className="mb-3">
                   <div className="input-group my-2">
                     <span className="input-group-text">Code</span>
@@ -246,6 +250,7 @@ const Admin = () => {
                     type="submit"
                     className="btn btn-primary"
                     data-bs-dismiss="modal"
+                    onClick={onSubmitHandler}
                   >
                     Confirm
                   </button>
