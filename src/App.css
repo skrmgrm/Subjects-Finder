@@ -4,9 +4,15 @@
   height: 200px;
 }
 
-.modal-dialog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.lead-text {
+  margin-top: 1rem;
+  font-size: 0.8rem !important;
+}
+
+html,
+body,
+div#root,
+.app,
+.showcase {
+  height: 100% !important;
 }
