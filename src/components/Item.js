@@ -5,6 +5,8 @@ import SubjectTitle from "./UI/Card/SubjectTitle";
 import SubjectSchedule from "./UI/Card/SubjectSchedule";
 import SubjectSection from "./UI/Card/SubjectSection";
 
+import { Link } from "react-router-dom";
+
 const Item = (props) => {
   return (
     <Card>
@@ -18,14 +20,12 @@ const Item = (props) => {
             <SubjectSection>{props.section}</SubjectSection>
           </div>
           <div className="col-md-2">
-            <a
-              href={props.link}
-              target="_blank"
+            <Link
+              to={`/subjects/${props.id}`}
               className="btn btn-primary w-100 my-3 my-md-5 "
-              rel="noreferrer"
             >
-              Join
-            </a>
+              View Details
+            </Link>
           </div>
         </div>
       </div>
