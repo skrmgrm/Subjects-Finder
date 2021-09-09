@@ -69,12 +69,6 @@ function App() {
     }
 
     fetchSubjects();
-    setCode("");
-    setGclassroomCode("");
-    setSection("");
-    setDescription("");
-    setSchedule("");
-    setLink("");
   };
 
   const onDeleteHandler = (key) => {
