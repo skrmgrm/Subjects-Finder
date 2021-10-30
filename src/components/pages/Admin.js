@@ -79,7 +79,7 @@ const Admin = ({
     <div className="showcase">
       <Navbar onSearch={onSearchHandler} searchState={setOnSearch} />
       <div
-        className="container text-center"
+        className="container text-center my-5"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >

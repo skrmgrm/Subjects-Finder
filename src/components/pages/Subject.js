@@ -13,15 +13,15 @@ const Subject = ({ subjects }) => {
   const filterSubject = subjects.filter((subject) => subject.id === id);
 
   return (
-    <div className="">
+    <div className="subject-container">
       {filterSubject.map((subject) => {
         console.log(subject);
         return (
           <Card key={subject.id}>
-            <div className="card-body">
-              <div className="row">
+            <div className="card-body p-0">
+              <SubjectCode>{subject.code}</SubjectCode>
+              <div className="row p-3">
                 <div className="col-md-4 text-center text-md-start">
-                  <SubjectCode>{subject.code}</SubjectCode>
                   <SubjectTitle>{subject.description}</SubjectTitle>
                   <SubjectSchedule>{subject.schedule}</SubjectSchedule>
                   <SubjectSection>{subject.section}</SubjectSection>
