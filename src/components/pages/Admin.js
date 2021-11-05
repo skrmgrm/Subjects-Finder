@@ -1,85 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import Navbar from "../UI/Navbar";
 
 import AdminItem from "../AdminItem";
 
-import axios from "axios";
-
-const Admin = () => {
+const Admin = ({
+  subjects,
+  onSubmitHandler,
+  onDelete,
+  handleSubmitCode,
+  handleSubmitSection,
+  handleSubmitDescription,
+  handleSubmitLink,
+  handleSubmitSchedule,
+  handleSubmitGclassroom,
+}) => {
   const [code, setCode] = useState("");
+  const [gClassroomCode, setGclassroomCode] = useState("");
   const [section, setSection] = useState("");
   const [description, setDescription] = useState("");
   const [schedule, setSchedule] = useState("");
   const [link, setLink] = useState("");
 
-  const [subjects, setSubjects] = useState([]);
   const [filteredSubjects, setFilteredSubjects] = useState([]);
 
   const [onSearch, setOnSearch] = useState(false);
 
-  const fetchSubjects = async () => {
-    try {
-      const response = await axios.get(
-        "https://subjects-finder-default-rtdb.asia-southeast1.firebasedatabase.app/subjects.json"
-      );
-
-      let newSubjects = [];
-
-      for (const key in response.data) {
-        newSubjects.push({
-          id: key,
-          code: response.data[key].code,
-          section: response.data[key].section,
-          description: response.data[key].description,
-          schedule: response.data[key].schedule,
-          link: response.data[key].link,
-        });
-      }
-
-      setSubjects(newSubjects.reverse());
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchSubjects();
-  });
-
-  const onSubmitHandler = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await axios.post(
-        "https://subjects-finder-backend.herokuapp.com/subjects",
-        {
-          code,
-          description,
-          section,
-          schedule,
-          groupLink: link,
-        }
-      );
-      
-      console.log(response, 'post response')
-
-    } catch (error) {
-      console.log('triggered')
-      console.log(error);
-    }
-
-    setCode("");
-    setSection("");
-    setDescription("");
-    setSchedule("");
-    setLink("");
-  };
-
   const onDeleteHandler = async (key) => {
-    await axios.delete(
-      `https://subjects-finder-default-rtdb.asia-southeast1.firebasedatabase.app/subjects/${key}.json`
-    );
+    onDelete(key);
   };
 
   const onSearchHandler = (value) => {
@@ -99,29 +47,39 @@ const Admin = () => {
 
   const handleCode = (e) => {
     setCode(e.target.value);
+    handleSubmitCode(e.target.value);
   };
 
   const handleSection = (e) => {
     setSection(e.target.value);
+    handleSubmitSection(e.target.value);
   };
 
   const handleDescription = (e) => {
     setDescription(e.target.value);
+    handleSubmitDescription(e.target.value);
   };
 
   const handleSchedule = (e) => {
     setSchedule(e.target.value);
+    handleSubmitSchedule(e.target.value);
   };
 
   const handleLink = (e) => {
     setLink(e.target.value);
+    handleSubmitLink(e.target.value);
+  };
+
+  const handleGclassroom = (e) => {
+    setGclassroomCode(e.target.value);
+    handleSubmitGclassroom(e.target.value);
   };
 
   return (
     <div className="showcase">
       <Navbar onSearch={onSearchHandler} searchState={setOnSearch} />
       <div
-        className="container text-center"
+        className="container text-center my-5"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
@@ -223,6 +181,20 @@ const Admin = () => {
                       onChange={handleSchedule}
                     />
                   </div>
+
+                  <div className="input-group my-2">
+                    <span className="input-group-text">
+                      Google Classroom Code
+                    </span>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="sczxawq"
+                      value={gClassroomCode}
+                      onChange={handleGclassroom}
+                    />
+                  </div>
+
                   <label
                     htmlFor="groupLink"
                     className="form-label text-primary my-2"

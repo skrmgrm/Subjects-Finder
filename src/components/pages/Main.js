@@ -1,42 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Item from "../Item";
 import Navbar from "../UI/Navbar";
 
-import axios from "axios";
-
-const Main = () => {
-  const [subjects, setSubjects] = useState([]);
+const Main = ({ subjects }) => {
   const [onSearch, setOnSearch] = useState(false);
   const [filteredSubjects, setFilteredSubjects] = useState([]);
-
-  const fetchSubjects = async () => {
-    try {
-      const response = await axios.get(
-        "https://subjects-finder-default-rtdb.asia-southeast1.firebasedatabase.app/subjects.json"
-      );
-
-      let newSubjects = [];
-
-      for (const key in response.data) {
-        newSubjects.push({
-          id: key,
-          code: response.data[key].code,
-          section: response.data[key].section,
-          description: response.data[key].description,
-          schedule: response.data[key].schedule,
-          link: response.data[key].link,
-        });
-      }
-
-      setSubjects(newSubjects.reverse());
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchSubjects();
-  });
 
   const onSearchHandler = (value) => {
     const filteredSubjects = subjects.filter((subject) => {

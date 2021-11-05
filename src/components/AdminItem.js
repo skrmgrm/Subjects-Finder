@@ -13,10 +13,10 @@ const AdminItem = (props) => {
 
   return (
     <Card>
-      <div className="card-body">
-        <div className="row">
+      <div className="card-body p-0">
+        <SubjectCode>{props.code}</SubjectCode>
+        <div className="row p-3">
           <div className="col-md-10 text-center text-md-start">
-            <SubjectCode>{props.code}</SubjectCode>
             <SubjectTitle>{props.description}</SubjectTitle>
 
             <SubjectSchedule>{props.schedule}</SubjectSchedule>

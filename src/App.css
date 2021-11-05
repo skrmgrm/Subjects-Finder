@@ -1,7 +1,13 @@
 .showcase::before {
   content: "";
   display: block;
-  height: 200px;
+  height: 100px;
+}
+
+.showcase::after {
+  content: "";
+  display: block;
+  height: 1rem;
 }
 
 .lead-text {
@@ -9,10 +15,18 @@
   font-size: 0.8rem !important;
 }
 
-html,
 body,
 div#root,
 .app,
-.showcase {
+.showcase,
+.subject-container,
+html {
   height: 100% !important;
+}
+
+.subject-container {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
 }
