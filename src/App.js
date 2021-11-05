@@ -123,6 +123,7 @@ function App() {
               handleSubmitSchedule={handleSubmitSchedule}
               handleSubmitGclassroom={handleSubmitGclassroom}
               onDelete={onDeleteHandler}
+              fetchSubjects={fetchSubjects}
             />
           </Route>
           <Route path="/subjects/:id" exact>

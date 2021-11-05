@@ -14,6 +14,7 @@ const Admin = ({
   handleSubmitLink,
   handleSubmitSchedule,
   handleSubmitGclassroom,
+  fetchSubjects,
 }) => {
   const [code, setCode] = useState("");
   const [gClassroomCode, setGclassroomCode] = useState("");
@@ -87,7 +88,6 @@ const Admin = ({
           <i className="bi bi-plus-lg"></i> Add Subject
         </button>
       </div>
-
       {subjects.length === 0 && (
         <div className="container text-center mt-5">
           <p className="h5 text-secondary">No subjects found...</p>
@@ -104,11 +104,12 @@ const Admin = ({
               section={subject.section}
               schedule={subject.schedule}
               link={subject.link}
+              gClassroomCode={subject.gClassroomCode}
               onDelete={onDeleteHandler}
+              fetchSubjects={fetchSubjects}
             />
           );
         })}
-
       {!onSearch &&
         subjects.map((subject) => {
           return (
@@ -120,7 +121,9 @@ const Admin = ({
               section={subject.section}
               schedule={subject.schedule}
               link={subject.link}
+              gClassroomCode={subject.gClassroomCode}
               onDelete={onDeleteHandler}
+              fetchSubjects={fetchSubjects}
             />
           );
         })}
