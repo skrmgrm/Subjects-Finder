@@ -34,12 +34,12 @@ const Admin = ({
   const onSearchHandler = (value) => {
     const filteredSubjects = subjects.filter((subject) => {
       return (
-        subject.code.toUpperCase().includes(value) ||
-        subject.description.toUpperCase().includes(value) ||
+        subject.code.toUpperCase().includes(value.toUpperCase()) ||
+        subject.description.toUpperCase().includes(value.toUpperCase()) ||
         subject.code.includes(value) ||
         subject.description.includes(value) ||
-        subject.code.toLowerCase().includes(value) ||
-        subject.description.toLowerCase().includes(value)
+        subject.code.toLowerCase().includes(value.toLowerCase()) ||
+        subject.description.toLowerCase().includes(value.toLowerCase())
       );
     });
 

@@ -49,7 +49,7 @@ const AdminItem = (props) => {
               </span>
             </p>
           </div>
-          <div className="col-md-2 d-flex justify-content-center align-center gap-2">
+          <div className="col-md-4 d-flex justify-content-center align-center gap-2">
             <button
               type="button"
               className="btn btn-success my-5"
