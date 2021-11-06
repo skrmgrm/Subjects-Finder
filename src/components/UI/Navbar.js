@@ -6,10 +6,10 @@ const Navbar = (props) => {
   const onSearchChange = (e) => {
     setSearch(e.target.value);
     props.onSearch(e.target.value);
-    if (e.target.value === "") {
-      props.searchState(false);
-    } else {
+    if (e.target.value.length !== 0) {
       props.searchState(true);
+    } else {
+      props.searchState(false);
     }
   };
 

@@ -30,7 +30,8 @@ const Main = ({ subjects }) => {
             <p className="h5 text-secondary">No subjects found...</p>
           </div>
         )}
-        {onSearch &&
+
+        {!onSearch || filteredSubjects.length !== 0 ? (
           filteredSubjects.map((subject) => {
             return (
               <Item
@@ -43,7 +44,10 @@ const Main = ({ subjects }) => {
                 link={subject.link}
               />
             );
-          })}
+          })
+        ) : (
+          <p className="text-center lead">No Results Found</p>
+        )}
 
         {!onSearch &&
           subjects.map((subject) => {

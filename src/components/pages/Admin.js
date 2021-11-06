@@ -93,7 +93,7 @@ const Admin = ({
           <p className="h5 text-secondary">No subjects found...</p>
         </div>
       )}
-      {onSearch &&
+      {!onSearch || filteredSubjects.length !== 0 ? (
         filteredSubjects.map((subject) => {
           return (
             <AdminItem
@@ -109,7 +109,11 @@ const Admin = ({
               fetchSubjects={fetchSubjects}
             />
           );
-        })}
+        })
+      ) : (
+        <p className="text-center lead">No Results Found</p>
+      )}
+
       {!onSearch &&
         subjects.map((subject) => {
           return (
