@@ -12,13 +12,13 @@ This webapp is developed using ReactJs, a javascript library for frontend develo
 
 #### Tasks
 
-- [x] Create Subjects :thumbsup:
-- [x] Delete Subjects :thumbsup:
-- [x] Update Subjects :thumbsup:
-- [x] Display Subjects :thumbsup:
-- [x] Landing Page :thumbsup:
-- [x] Admin Page :thumbsup:
-- [x] Search Bar :thumbsup:
+- [x] Create Subjects :100:
+- [x] Delete Subjects :100:
+- [x] Update Subjects :100:
+- [x] Display Subjects :100:
+- [x] Landing Page :100:
+- [x] Admin Page :100:
+- [x] Search Bar :100:
 
 
 #### Links <br>
