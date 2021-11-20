@@ -15,5 +15,5 @@
 
 
 #### Links <br>
-Client Page: [Netlify](https://subjects-finder.netlify.app/) <br>
-Admin Page: [Netlify](https://subjects-finder.netlify.app/admin) <br>
+Client Page: [https://subjects-finder.netlify.app/](https://subjects-finder.netlify.app/) <br>
+Admin Page: [https://subjects-finder.netlify.app/admin](https://subjects-finder.netlify.app/admin) <br>
