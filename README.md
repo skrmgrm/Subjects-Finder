@@ -27,6 +27,8 @@ Admin Page: [https://subjects-finder.netlify.app/admin](https://subjects-finder.
 
 
 #### Author <br>
-##### Barlolong, Joshua I. <br>
+**Barlolong, Joshua I.** <br>
 Bachelor of Science in Computer Engineering <br>
 4th Year
+
+[2.2]: http://i.imgur.com/fep1WsG.png [https://www.facebook.com/skrmgrm](https://www.facebook.com/skrmgrm)
