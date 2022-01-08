@@ -33,4 +33,4 @@ Bachelor of Science in Computer Engineering <br>
 
 [![alt text][2.1]][2]
 
-[2.2]: http://i.imgur.com/fep1WsG.png [https://www.facebook.com/skrmgrm](https://www.facebook.com/skrmgrm)
+[2.1]: http://i.imgur.com/P3YfQoD.png (https://www.facebook.com/skrmgrm)
