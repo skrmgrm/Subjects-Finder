@@ -31,6 +31,6 @@ Admin Page: [https://subjects-finder.netlify.app/admin](https://subjects-finder.
 Bachelor of Science in Computer Engineering <br>
 4th Year
 
-[![alt text][2.1]][2]
+![alt text][2.1]
 
-[2.1]: http://i.imgur.com/P3YfQoD.png (https://www.facebook.com/skrmgrm)
+[2.1]: http://i.imgur.com/P3YfQoD.png (https://www.facebook.com/skrmgrm) [https://www.facebook.com/skrmgrm]
