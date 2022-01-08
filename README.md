@@ -24,3 +24,9 @@ This webapp is developed using ReactJs, a javascript library for frontend develo
 #### Links <br>
 Client Page: [https://subjects-finder.netlify.app/](https://subjects-finder.netlify.app/) <br>
 Admin Page: [https://subjects-finder.netlify.app/admin](https://subjects-finder.netlify.app/admin) <br>
+
+
+#### Author <br>
+##### Barlolong, Joshua I. <br>
+Bachelor of Science in Computer Engineering <br>
+4th Year
