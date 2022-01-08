@@ -31,6 +31,8 @@ Admin Page: [https://subjects-finder.netlify.app/admin](https://subjects-finder.
 Bachelor of Science in Computer Engineering <br>
 4th Year
 
-![alt text][2.1]
+![alt text][2.2] Facebook <br>
+[https://www.facebook.com/joshua.barlolong.3](https://www.facebook.com/joshua.barlolong.3)
 
-[2.1]: http://i.imgur.com/P3YfQoD.png (https://www.facebook.com/skrmgrm) [https://www.facebook.com/skrmgrm]
+[2.2]: http://i.imgur.com/fep1WsG.png (facebook icon without padding)
+
