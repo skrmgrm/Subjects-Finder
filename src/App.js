@@ -5,11 +5,18 @@ import "./App.css";
 import Admin from "./components/pages/Admin";
 
 import Main from "./components/pages/Main";
+import LoginPage from "./components/LoginPage";
 
 import axios from "axios";
 import Subject from "./components/pages/Subject";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState({
+    email: "",
+    displayName: "",
+  });
+
   const [code, setCode] = useState("");
   const [gClassroomCode, setGclassroomCode] = useState("");
   const [section, setSection] = useState("");
@@ -105,12 +112,36 @@ function App() {
     setGclassroomCode(e);
   };
 
+  const loginHandler = (loginStatus, email, displayName) => {
+    setIsLoggedIn(loginStatus);
+    setUser({ email, displayName });
+  };
+
   return (
     <Router>
       <div className="app">
         <Switch>
           <Route path="/" exact>
-            <Main subjects={subjects} />
+            {isLoggedIn ? (
+              user.email === "joshuabarlolong@gmail.com" ? (
+                <Admin
+                  subjects={subjects}
+                  onSubmitHandler={onSubmitHandler}
+                  handleSubmitCode={handleSubmitCode}
+                  handleSubmitLink={handleSubmitLink}
+                  handleSubmitDescription={handleSubmitDescription}
+                  handleSubmitSection={handleSubmitSection}
+                  handleSubmitSchedule={handleSubmitSchedule}
+                  handleSubmitGclassroom={handleSubmitGclassroom}
+                  onDelete={onDeleteHandler}
+                  fetchSubjects={fetchSubjects}
+                />
+              ) : (
+                <Main subjects={subjects} />
+              )
+            ) : (
+              <LoginPage loginHandler={loginHandler} />
+            )}
           </Route>
           <Route path="/admin" exact>
             <Admin
