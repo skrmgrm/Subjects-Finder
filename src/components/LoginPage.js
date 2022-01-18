@@ -9,6 +9,7 @@ const LoginPage = ({ loginHandler }) => {
     const result = await user();
     if (result) {
       loginHandler(true, result.email, result.displayName);
+      localStorage.setItem("email", result.email);
       alert(`Signed-in as ${result.displayName}`);
     }
   };

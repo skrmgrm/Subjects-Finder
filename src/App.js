@@ -121,6 +121,16 @@ function App() {
     setIsLoggedIn(loginStatus);
   };
 
+  const localStorageStatus = () => {
+    const localUser = localStorage.getItem("email");
+    if (localUser) setIsLoggedIn(true);
+    else setIsLoggedIn(false);
+  };
+
+  useEffect(() => {
+    localStorageStatus();
+  }, []);
+
   return (
     <Router>
       <div className="app">

@@ -16,6 +16,7 @@ const Navbar = (props) => {
 
   const onLogout = () => {
     props.logoutHandler(false);
+    localStorage.removeItem("email");
     signOutUser();
   };
 
