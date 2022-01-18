@@ -1,4 +1,9 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signOut,
+} from "firebase/auth";
 import app from "./utils";
 
 const provider = new GoogleAuthProvider();
@@ -27,4 +32,15 @@ export const user = () => {
       );
     });
   return result;
+};
+
+// logout
+export const signOutUser = () => {
+  signOut(auth)
+    .then(() => {
+      alert("Signed out successfully");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 };

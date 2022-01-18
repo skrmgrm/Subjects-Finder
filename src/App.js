@@ -117,6 +117,10 @@ function App() {
     setUser({ email, displayName });
   };
 
+  const logoutHandler = (loginStatus) => {
+    setIsLoggedIn(loginStatus);
+  };
+
   return (
     <Router>
       <div className="app">
@@ -135,9 +139,10 @@ function App() {
                   handleSubmitGclassroom={handleSubmitGclassroom}
                   onDelete={onDeleteHandler}
                   fetchSubjects={fetchSubjects}
+                  logoutHandler={logoutHandler}
                 />
               ) : (
-                <Main subjects={subjects} />
+                <Main subjects={subjects} logoutHandler={logoutHandler} />
               )
             ) : (
               <LoginPage loginHandler={loginHandler} />

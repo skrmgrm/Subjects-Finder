@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Item from "../Item";
 import Navbar from "../UI/Navbar";
 
-const Main = ({ subjects }) => {
+const Main = ({ subjects, logoutHandler }) => {
   const [onSearch, setOnSearch] = useState(false);
   const [filteredSubjects, setFilteredSubjects] = useState([]);
 
@@ -23,7 +23,11 @@ const Main = ({ subjects }) => {
 
   return (
     <div className="showcase">
-      <Navbar onSearch={onSearchHandler} searchState={setOnSearch} />
+      <Navbar
+        onSearch={onSearchHandler}
+        searchState={setOnSearch}
+        logoutHandler={logoutHandler}
+      />
       <div className="container pt-4">
         {subjects.length === 0 && (
           <div className="container text-center mt-5">

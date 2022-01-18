@@ -15,6 +15,7 @@ const Admin = ({
   handleSubmitSchedule,
   handleSubmitGclassroom,
   fetchSubjects,
+  logoutHandler,
 }) => {
   const [code, setCode] = useState("");
   const [gClassroomCode, setGclassroomCode] = useState("");
@@ -78,7 +79,11 @@ const Admin = ({
 
   return (
     <div className="showcase">
-      <Navbar onSearch={onSearchHandler} searchState={setOnSearch} />
+      <Navbar
+        onSearch={onSearchHandler}
+        searchState={setOnSearch}
+        logoutHandler={logoutHandler}
+      />
       <div
         className="container text-center my-5"
         data-bs-toggle="modal"

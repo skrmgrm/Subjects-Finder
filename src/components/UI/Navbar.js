@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { signOutUser } from "../../provider";
 
 const Navbar = (props) => {
   const [search, setSearch] = useState("");
@@ -11,6 +12,11 @@ const Navbar = (props) => {
     } else {
       props.searchState(false);
     }
+  };
+
+  const onLogout = () => {
+    props.logoutHandler(false);
+    signOutUser();
   };
 
   return (
@@ -29,6 +35,9 @@ const Navbar = (props) => {
             <p className="lead-text text-primary">
               &copy; BARLOLONG, JOSHUA (2021)
             </p>
+            <button className="btn btn-danger" onClick={onLogout}>
+              Logout
+            </button>
           </div>
         </div>
       </nav>
