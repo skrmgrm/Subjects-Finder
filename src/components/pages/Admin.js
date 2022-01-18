@@ -85,11 +85,11 @@ const Admin = ({
         logoutHandler={logoutHandler}
       />
       <div
-        className="container text-center my-5"
+        className="container text-center my-5 "
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
-        <button className="btn btn-primary">
+        <button className="btn btn-primary mt-5">
           <i className="bi bi-plus-lg"></i> Add Subject
         </button>
       </div>
