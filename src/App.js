@@ -123,8 +123,10 @@ function App() {
 
   const localStorageStatus = () => {
     const localUser = localStorage.getItem("email");
-    if (localUser) setIsLoggedIn(true);
-    else setIsLoggedIn(false);
+    if (localUser) {
+      setIsLoggedIn(true);
+      setUser({ ...user, email: localUser });
+    } else setIsLoggedIn(false);
   };
 
   useEffect(() => {

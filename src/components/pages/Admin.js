@@ -89,7 +89,7 @@ const Admin = ({
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
-        <button className="btn btn-primary ">
+        <button className="btn btn-primary mt-5">
           <i className="bi bi-plus-lg"></i> Add Subject
         </button>
       </div>
