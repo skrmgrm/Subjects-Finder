@@ -33,8 +33,15 @@ const Navbar = (props) => {
             onChange={onSearchChange}
           />
           <div className="container-fluid text-start mt-2">
-            <p className="lead-text text-primary">
-              &copy; BARLOLONG, JOSHUA (2021)
+            <p className="lead-text ">
+              <a
+                href="https://skrmgrm.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-decoration-none portfolio-link"
+              >
+                &copy; BARLOLONG, JOSHUA (2021)
+              </a>
             </p>
             <button className="btn btn-danger" onClick={onLogout}>
               Logout

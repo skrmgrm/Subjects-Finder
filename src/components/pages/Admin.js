@@ -98,44 +98,46 @@ const Admin = ({
           <p className="h5 text-secondary">No subjects found...</p>
         </div>
       )}
-      {!onSearch || filteredSubjects.length !== 0 ? (
-        filteredSubjects.map((subject) => {
-          return (
-            <AdminItem
-              key={subject.id}
-              id={subject.id}
-              code={subject.code}
-              description={subject.description}
-              section={subject.section}
-              schedule={subject.schedule}
-              link={subject.link}
-              gClassroomCode={subject.gClassroomCode}
-              onDelete={onDeleteHandler}
-              fetchSubjects={fetchSubjects}
-            />
-          );
-        })
-      ) : (
-        <p className="text-center lead">No Results Found</p>
-      )}
+      <div className="container row mx-auto">
+        {!onSearch || filteredSubjects.length !== 0 ? (
+          filteredSubjects.map((subject) => {
+            return (
+              <AdminItem
+                key={subject.id}
+                id={subject.id}
+                code={subject.code}
+                description={subject.description}
+                section={subject.section}
+                schedule={subject.schedule}
+                link={subject.link}
+                gClassroomCode={subject.gClassroomCode}
+                onDelete={onDeleteHandler}
+                fetchSubjects={fetchSubjects}
+              />
+            );
+          })
+        ) : (
+          <p className="text-center lead">No Results Found</p>
+        )}
 
-      {!onSearch &&
-        subjects.map((subject) => {
-          return (
-            <AdminItem
-              key={subject.id}
-              id={subject.id}
-              code={subject.code}
-              description={subject.description}
-              section={subject.section}
-              schedule={subject.schedule}
-              link={subject.link}
-              gClassroomCode={subject.gClassroomCode}
-              onDelete={onDeleteHandler}
-              fetchSubjects={fetchSubjects}
-            />
-          );
-        })}
+        {!onSearch &&
+          subjects.map((subject) => {
+            return (
+              <AdminItem
+                key={subject.id}
+                id={subject.id}
+                code={subject.code}
+                description={subject.description}
+                section={subject.section}
+                schedule={subject.schedule}
+                link={subject.link}
+                gClassroomCode={subject.gClassroomCode}
+                onDelete={onDeleteHandler}
+                fetchSubjects={fetchSubjects}
+              />
+            );
+          })}
+      </div>
 
       {/* MODAL*/}
       <div className="modal fade show" id="exampleModal" tabIndex="-1">

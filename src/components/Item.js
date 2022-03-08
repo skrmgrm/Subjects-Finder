@@ -12,16 +12,18 @@ const Item = (props) => {
     <Card>
       <div className="card-body p-0">
         <SubjectCode>{props.code}</SubjectCode>
-        <div className="row p-3">
-          <div className="col-md-10 text-center text-md-start">
+        <div className="row  p-3">
+          <div className="col text-center text-md-start">
             <SubjectTitle>{props.description}</SubjectTitle>
             <SubjectSchedule>{props.schedule}</SubjectSchedule>
-            <SubjectSection>{props.section}</SubjectSection>
+            <SubjectSection>
+              {props.section ? `Section  ${props.section}` : "N/A"}
+            </SubjectSection>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-12 d-flex">
             <Link
               to={`/subjects/${props.id}`}
-              className="btn btn-primary w-100 my-3 my-md-5 "
+              className="btn btn-primary w-100 my-3 my-md-2 "
             >
               View Details
             </Link>

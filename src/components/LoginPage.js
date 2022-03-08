@@ -2,7 +2,9 @@ import React from "react";
 
 import { user } from "../provider";
 
-import ceaLogo from "../assets/ceaLogo.jpg";
+import ParticleBackground from "./particle/ParticleBackground";
+
+import ceaLogo from "../assets/ceaLogo.png";
 
 const LoginPage = ({ loginHandler }) => {
   const login = async () => {
@@ -15,15 +17,18 @@ const LoginPage = ({ loginHandler }) => {
   };
 
   return (
-    <div className="container d-flex flex-column h-100 justify-content-center align-items-center">
-      <img className="w-25" src={ceaLogo} alt="CEA Logo" />
-      <h1 className="h1">CEA Subjects Finder</h1>
-      <div className="w-100 d-flex justify-content-center mt-3">
-        <button className="btn btn-primary w-25" onClick={login}>
-          <i className="bi bi-google"></i> Login
-        </button>
+    <>
+      <div className="container-fluid bg-dark d-flex flex-column h-100 justify-content-center align-items-center">
+        <img className="w-25" src={ceaLogo} alt="CEA Logo" />
+        <h1 className="h1 text-white">CEA Subjects Finder</h1>
+        <div className="w-100 d-flex justify-content-center mt-3">
+          <button className="btn btn-primary w-25 btn-login" onClick={login}>
+            <i className="bi bi-google"></i> Login
+          </button>
+        </div>
       </div>
-    </div>
+      <ParticleBackground className="particle-background" />
+    </>
   );
 };
 

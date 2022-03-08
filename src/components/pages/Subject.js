@@ -15,27 +15,28 @@ const Subject = ({ subjects }) => {
   return (
     <div className="subject-container">
       {filterSubject.map((subject) => {
-        console.log(subject);
         return (
           <Card key={subject.id}>
             <div className="card-body p-0">
               <SubjectCode>{subject.code}</SubjectCode>
               <div className="row p-3">
-                <div className="col-md-4 text-center text-md-start">
+                <div className="col-lg-4 text-center text-lg-start ">
                   <SubjectTitle>{subject.description}</SubjectTitle>
                   <SubjectSchedule>{subject.schedule}</SubjectSchedule>
-                  <SubjectSection>{subject.section}</SubjectSection>
+                  <SubjectSection>
+                    {subject.section ? `Section  ${subject.section}` : "N/A"}
+                  </SubjectSection>
                 </div>
-                <div className="col-md-8 text-center text-md-start mt-4">
+                <div className="col-lg-8 text-center text-lg-start mx-auto mt-lg-1 ">
                   <p className="fw-bold  text-secondary">
                     Facebook Group Link:{" "}
                     <a
                       href={subject.link}
                       target="_blank"
-                      className="fw-light"
+                      className={`${subject.link || "disabled fw-light"}`}
                       rel="noreferrer"
                     >
-                      {subject.link}
+                      {subject.link || "N/A"}
                     </a>
                   </p>
                   <p className="fw-bold  text-secondary">

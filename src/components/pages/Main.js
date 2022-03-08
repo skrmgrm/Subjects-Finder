@@ -28,7 +28,7 @@ const Main = ({ subjects, logoutHandler }) => {
         searchState={setOnSearch}
         logoutHandler={logoutHandler}
       />
-      <div className="container pt-4 mt-5">
+      <div className="container pt-4 mt-5 row mx-auto">
         {subjects.length === 0 && (
           <div className="container text-center mt-5">
             <p className="h5 text-secondary">No subjects found...</p>

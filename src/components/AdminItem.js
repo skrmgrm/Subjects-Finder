@@ -28,7 +28,9 @@ const AdminItem = (props) => {
           <div className="col-md-10 text-center text-md-start">
             <SubjectTitle>{props.description}</SubjectTitle>
             <SubjectSchedule>{props.schedule}</SubjectSchedule>
-            <SubjectSection>{props.section}</SubjectSection>
+            <SubjectSection>
+              {props.section ? `Section  ${props.section}` : "N/A"}
+            </SubjectSection>
           </div>
           <div className="col-md-8 text-center text-md-start mt-4">
             <p className="fw-bold  text-secondary">
@@ -36,10 +38,10 @@ const AdminItem = (props) => {
               <a
                 href={props.link}
                 target="_blank"
-                className="fw-light"
+                className={`${props.link || "disabled fw-light"}`}
                 rel="noreferrer"
               >
-                {props.link}
+                {props.link || "N/A"}
               </a>
             </p>
             <p className="fw-bold  text-secondary">
@@ -49,7 +51,7 @@ const AdminItem = (props) => {
               </span>
             </p>
           </div>
-          <div className="col-md-4 d-flex justify-content-center align-center gap-2">
+          <div className="col-md-12 d-flex justify-content-center align-center gap-2">
             <button
               type="button"
               className="btn btn-success my-5"
@@ -77,7 +79,7 @@ const AdminItem = (props) => {
       </div>
       {onEdit && (
         <form
-          className=" mx-5"
+          className="mx-5"
           onSubmit={(e) => {
             e.preventDefault();
             axios
