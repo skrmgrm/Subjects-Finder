@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { signOutUser } from "../../provider";
+// import { signOutUser } from "../../provider";
 
 const Navbar = (props) => {
   const [search, setSearch] = useState("");
@@ -14,11 +14,11 @@ const Navbar = (props) => {
     }
   };
 
-  const onLogout = () => {
-    props.logoutHandler(false);
-    localStorage.removeItem("email");
-    signOutUser();
-  };
+  // const onLogout = () => {
+  //   props.logoutHandler(false);
+  //   localStorage.removeItem("email");
+  //   signOutUser();
+  // };
 
   return (
     <div className="container">
@@ -43,9 +43,9 @@ const Navbar = (props) => {
                 &copy; BARLOLONG, JOSHUA (2021)
               </a>
             </p>
-            <button className="btn btn-danger" onClick={onLogout}>
+            {/* <button className="btn btn-danger" onClick={onLogout}>
               Logout
-            </button>
+            </button> */}
           </div>
         </div>
       </nav>
